@@ -1,5 +1,4 @@
-// src/app/page.jsx
-"use client"; // დაამატეთ ეს ხაზი
+"use client";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
@@ -16,15 +15,13 @@ const FacebookLoginButton = dynamic(
 export default function Home() {
   const [profile, setProfile] = useState(null);
 
-  useEffect(() => {
-    // კოდი, რომელიც იყენებს window ობიექტს
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div>
       {!profile ? (
         <LoginSocialFacebook
-          appId="1591703015807788"
+          appId="495158643203115"
           onResolve={(response) => {
             console.log(response);
             setProfile(response.data);
@@ -32,6 +29,7 @@ export default function Home() {
           onReject={(error) => {
             console.log(error);
           }}
+       
         >
           <FacebookLoginButton />
         </LoginSocialFacebook>
@@ -39,6 +37,7 @@ export default function Home() {
         <div>
           <h1>{profile.name}</h1>
           <img src={profile.picture.data.url} alt="Profile" />
+
         </div>
       )}
     </div>
