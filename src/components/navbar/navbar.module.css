@@ -1,0 +1,13 @@
+.main {
+  background-color: rgb(243, 243, 243);
+  height: 90px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 0px 230px 0px 230px;
+  display: flex;
+  border: 2px solid rgba(0, 0, 0, 0.226);
+}
+.logo {
+  margin: 20px 0px 0px 0px;
+  color: rgb(22, 81, 245);
+  font-size: 3rem;
+}
